@@ -1,0 +1,19 @@
+{
+    "name": "清凉器",
+    "desc": "给你的桌面安装一个空调吧",
+    "main": "dist/index.html",
+    "version": "0.0.1",
+    "logo": "coolerLogo.jpg",
+    "preload": "preload.js",
+    "dev": {
+        "mian": "http://localhost:9528",
+        "preload": "preload.js"
+    },
+    "winOptions": {
+        "width": 320,
+        "height": 635
+    },
+    "header": {
+        "show": false
+    }
+}
