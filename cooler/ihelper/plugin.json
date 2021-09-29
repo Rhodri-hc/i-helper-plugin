@@ -6,14 +6,8 @@
     "logo": "coolerLogo.jpg",
     "preload": "preload.js",
     "dev": {
-        "mian": "http://localhost:9528",
+        "main": "http://localhost:3000",
         "preload": "preload.js"
     },
-    "winOptions": {
-        "width": 320,
-        "height": 635
-    },
-    "header": {
-        "show": false
-    }
+    "id": "7c23a81c-519d-d481-c828-ce8743e0ba85"
 }
