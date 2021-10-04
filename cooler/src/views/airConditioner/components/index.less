@@ -1,80 +1,78 @@
-.conditioner{
-    display: flex;
-    color: #2c3e50;
-    flex-direction: column;
-    align-items: center;
-    &__tip{
-      color: #666;
+.conditioner {
+  display: flex;
+  color: #2c3e50;
+  flex-direction: column;
+  align-items: center;
+  &__tip {
+    color: #666;
+  }
+  &__contain {
+    width: 504px;
+    position: relative;
+    &-device {
+      height: 150px;
+      border-radius: 10px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border: 1px solid rgb(224, 224, 224);
+      box-shadow: #b3b3b3 0px 3px 3px -2px, #e0e0e0 0px 3px 4px 0px, #e0e0e0 0px 1px 8px 0px;
     }
-    &__contain{
-      width: 504px;
-      position: relative;
-      &-device{
-        height: 150px;
-        border-radius: 10px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border: 1px solid rgb(224, 224, 224);
-        box-shadow: #b3b3b3 0px 3px 3px -2px, 
-                    #e0e0e0 0px 3px 4px 0px, 
-                    #e0e0e0 0px 1px 8px 0px;
-      }
-  
-      &-icon{
-        position: absolute;
-        top: 10px;
-        left: 10px;
-      }
-  
-      &-energy{
-        width: 50px;
-      }
-  
-      &-line{
-        position: absolute;
-        top: 130px;
-        width: 100%;
-        height: 1px;
-        border-top: #e0e0e0 1px solid;
-        border-bottom: #e0e0e0 1px solid;
-      }
-  
-      &-sign{
-        position: absolute;
-        height: 4px;
-        width: 4px;
-        border-radius: 50%;
-        top: 138px;
-        right: 15px;
-        &--dark{
-          background: #e0e0e0;
-        }
-        &--light{
-          background: #38F709;
-        }
-      }
+
+    &-icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
-  
-    &__wind{
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-      & > div{
-        background-color: rgb(187, 187, 187);
-        width: 5px;
-        height: 40px;
+
+    &-energy {
+      width: 50px;
+    }
+
+    &-line {
+      position: absolute;
+      top: 130px;
+      width: 100%;
+      height: 1px;
+      border-top: #e0e0e0 1px solid;
+      border-bottom: #e0e0e0 1px solid;
+    }
+
+    &-sign {
+      position: absolute;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      top: 138px;
+      right: 15px;
+      &--dark {
+        background: #e0e0e0;
       }
-  
-      &-left{
-        transform: rotate(10deg);
-      }
-  
-      &-center{
-        margin: 0 80px;
-      }
-  
-      &-right{
-        transform: rotate(-10deg);
+      &--light {
+        background: #38f709;
       }
     }
   }
+
+  &__wind {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    & > div {
+      background-color: rgb(187, 187, 187);
+      width: 5px;
+      height: 40px;
+    }
+
+    &-left {
+      transform: rotate(10deg);
+    }
+
+    &-center {
+      margin: 0 80px;
+    }
+
+    &-right {
+      transform: rotate(-10deg);
+    }
+  }
+}
