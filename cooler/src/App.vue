@@ -10,6 +10,10 @@ import AirConditioner from './views/airConditioner/index.vue'
 
 
 <style>
+@font-face {
+  font-family: 'digital-7-mono';
+  src: url('@/assets/font/digital-7-mono-3.ttf');
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

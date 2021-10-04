@@ -1,99 +1,88 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <div class="conditioner">
-    <h1 class="conditioner__title">便携小空调</h1>
-    <p class="conditioner__tip">Tip: 为你的夏日带去清凉！</p>
+    <div class="air">
+        <!-- 空调部分 -->
+        <Conditioner />
 
-    <div class="conditioner__contain">
-      <!-- 空调部分 -->
-      <div class="conditioner__contain-device"> 
-        <!-- 节能商标 -->
-        <div class="conditioner__contain-icon">
-          <img class="conditioner__contain-energy" src="@/assets/energy.png" />
+        <!-- 遥控部分 -->
+        <div class="air__control">
+            <!-- 屏显 -->
+            <div class="air__control-screen">
+                <span class="air__control-digital">26</span>
+                <span class="air__control-degree">°C</span>
+            </div>
+
+            <!-- 按钮 -->
+            <div class="air__control-buttons">
+                <button 
+                    class="button-common air__control-switch--close air__control-switch--open"
+                >
+                    <!-- 开关 -->
+                    <svg class="air__control-buttons-svg" 
+                         focusable="false" 
+                         viewBox="0 0 24 24" 
+                         aria-hidden="true" 
+                         data-testid="PowerSettingsNewIcon"
+                    >
+                        <path d="M13 3h-2v10h2V3zm4.83 2.17-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"></path>
+                    </svg>
+                </button>
+
+                <div>
+                    <button 
+                        class="air__control-buttons-two button-common" 
+                        tabindex="0" 
+                        type="button" 
+                        aria-label="add"
+                    >
+                        <!-- 向上 -->
+                        <svg 
+                           class="air__control-buttons-svg" 
+                           focusable="false"
+                           viewBox="0 0 24 24" 
+                           aria-hidden="true" 
+                           data-testid="ExpandLessIcon"
+                        >
+                            <path d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                        </svg>
+                    </button>
+
+                    <button 
+                        class="air__control-buttons-two button-common" 
+                        tabindex="0" 
+                        type="button" 
+                        aria-label="reduce"
+                    >
+                        <!-- 向下 -->
+                        <svg 
+                           class="air__control-buttons-svg" 
+                           focusable="false" 
+                           viewBox="0 0 24 24" 
+                           aria-hidden="true" 
+                           data-testid="ExpandLessIcon"
+                        >
+                            <path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <!-- 空调底部 -->
-        <div class="conditioner__contain-line"></div>
-        <div class="conditioner__contain-sign conditioner__contain-sign--line conditioner__contain-sign--dark"></div>
-
-      </div>
-      <!-- 空调底下的风 -->
-      <div class="conditioner__contain-wind">
-        <!-- 左 -->
-        <div></div>
-        <!-- 中 -->
-        <div></div>
-        <!-- 右 -->
-        <div></div>
-      </div>
     </div>
-  </div>
 </template>
 
+<script>
+import { defineComponent } from 'vue'
+import Conditioner from "./components/index.vue";
+
+export default defineComponent({
+    components: {
+       Conditioner 
+    },
+    setup() {
+        
+    },
+})
+</script>
+
 <style scoped lang="less">
-.conditioner{
-  display: flex;
-  color: #2c3e50;
-  flex-direction: column;
-  align-items: center;
-  &__tip{
-    color: #666;
-  }
-  &__contain{
-    width: 504px;
-    position: relative;
-    &-device{
-      height: 150px;
-      border-radius: 10px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      border: 1px solid rgb(224, 224, 224);
-      box-shadow: #b3b3b3 0px 3px 3px -2px, 
-                  #e0e0e0 0px 3px 4px 0px, 
-                  #e0e0e0 0px 1px 8px 0px;
-    }
-
-    &-icon{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    &-energy{
-      width: 50px;
-    }
-
-    &-line{
-      position: absolute;
-      top: 130px;
-      width: 100%;
-      height: 1px;
-      border-top: #e0e0e0 1px solid;
-      border-bottom: #e0e0e0 1px solid;
-    }
-
-    &-sign{
-      position: absolute;
-      height: 4px;
-      width: 4px;
-      border-radius: 50%;
-      bottom: 10px;
-      right: 15px;
-      &--dark{
-        background: #e0e0e0;
-      }
-      &--light{
-        background: #38F709;
-      }
-    }
-  }
-}
-
+@import "./index.less";
 </style>
