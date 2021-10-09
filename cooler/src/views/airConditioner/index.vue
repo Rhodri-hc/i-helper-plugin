@@ -10,7 +10,7 @@
     <div class="air__control">
       <!-- 屏显 -->
       <div class="air__control-screen">
-        <span class="air__control-digital">26</span>
+        <span class="air__control-digital">{{ state.temperature }}</span>
         <span class="air__control-degree">°C</span>
       </div>
 
@@ -26,6 +26,7 @@
             focusable="false"
             viewBox="0 0 24 24"
             aria-hidden="true"
+            fill="white"
             data-testid="PowerSettingsNewIcon"
           >
             <path
@@ -97,7 +98,7 @@ export default defineComponent({
       //  是否打开空调
       openConditioner: false,
       //  空调温度
-      temperature: 0,
+      temperature: 26,
     });
 
     /**
@@ -116,11 +117,10 @@ export default defineComponent({
     * @date 2021年10月04日 21:33
     */
     function adjustTemperature(type: string) {
-      console.log(type);
       if (type === 'add') {
-        state.temperature += state.temperature;
+        state.temperature += 1;
       } else {
-        state.temperature -= state.temperature;
+        state.temperature -= 1;
       }
     }
 

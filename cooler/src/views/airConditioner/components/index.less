@@ -18,6 +18,26 @@
       box-shadow: #b3b3b3 0px 3px 3px -2px, #e0e0e0 0px 3px 4px 0px, #e0e0e0 0px 1px 8px 0px;
     }
 
+    &-switch{
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      &-logo{
+        width: 45px;
+      }
+    }
+
+    &-temperature{
+      font-family: 'digital-7-mono';
+      font-size: 25px;
+      color: #b3b3b3;
+      &--snow{
+        font-size: 16px;
+        margin: 0 15px 5px 0;
+      }
+    }
+
+
     &-icon {
       position: absolute;
       top: 10px;
@@ -73,6 +93,10 @@
 
     &-right {
       transform: rotate(-10deg);
+    }
+
+    &--transparent{
+      opacity: 0;
     }
   }
 }
